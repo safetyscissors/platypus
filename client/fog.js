@@ -19,7 +19,7 @@ $('#fogButton').on('click', function(){
 var particles = [];
 
 // The amount of particles to render
-var particleCount = 10;
+var particleCount = 30;
 
 // The maximum velocity in each direction
 var maxVelocity = 2;

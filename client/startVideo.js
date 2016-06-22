@@ -3,7 +3,7 @@ function startDemo() {
 }
 
 $('#startBtn').on('click', function(){
-    $('#myCanvas').fadeIn();
+    $('#myCanvas').fadeTo(1000,.8);
     $('#video').fadeIn();
     draw();
     $('#jumboText').fadeOut();
