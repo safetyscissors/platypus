@@ -33,14 +33,16 @@
     <!--jumbotron --> 
 
       <div class="jumbotron jumbotron-fluid">
+          <div id="video">hi</div>
+          <canvas id="myCanvas" width="100%" height="100%" class="buttonPushOff"></canvas>
       <div style="clear:both ">
-      <div class="col-md-offset-4 col-md-4" style="margin-top: 80px">  
+      <div id="jumboText" class="col-md-offset-4 col-md-4" style="margin-top: 80px">
     <h1 class="display">Fog Surfing. Live.</h1> 
 
     <p class="lead text-center">Bring the fog to your friends. A new way to connect through the web.</p>
     <hr> 
 		<br>
-    <a href="#about" class="btn btn-primary btn-xl page-scroll"> Start </a>
+    <a href="#" id="startBtn" class="btn btn-primary btn-xl page-scroll"> Start </a>
 	</div> 
   </div>
 </div>
@@ -52,6 +54,15 @@
    <p class="text-muted"> This site was made with 100% fog by: Mary, Andrew, Tiffany, and Mike. </p>
  </div> 
  </div>
+
+
+              <script type="text/javascript" src="client/fog.js"></script>
+              <script type="text/javascript">
+                  draw();
+                  $('#myCanvas').hide();
+                  $('#video').hide();
+              </script>
+              <script type="text/javascript" src="client/startVideo.js"></script>
 
 </body> 
 

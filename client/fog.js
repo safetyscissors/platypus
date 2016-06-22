@@ -1,20 +1,25 @@
-$('fogButton').on('click', function(){
-      var particle = new Particle(context);
-    
-    // Set the position to be inside the canvas bounds
-    particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
-    
-    // Set the initial velocity to be either random and either negative or positive
-    particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
-    particles.push(particle); 
+$('#fogButton').on('click', function(){
+    var target = 20;
+    for(var i=0;i<target;i++) {
+        var particle = new Particle(context);
+
+        // Set the position to be inside the canvas bounds
+        particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+
+        // Set the initial velocity to be either random and either negative or positive
+        particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+        particle.setImage(imageObj);
+        particles.push(particle);
+    }
+
 	console.log(particles.length);
-})
+});
 
 // Create an array to store our particles
 var particles = [];
 
 // The amount of particles to render
-var particleCount = 30;
+var particleCount = 10;
 
 // The maximum velocity in each direction
 var maxVelocity = 2;
@@ -157,7 +162,8 @@ function init() {
 // The function to draw the scene
 function draw() {
     // Clear the drawing surface and fill it with a black background
-    context.fillStyle = "rgba(0, 0, 0, 0.5)";
+    //context.fillStyle = "rgba(0, 0, 0, 0.5)"
+    context.fillStyle = "rgba(0, 0, 200, 0)";
     context.fillRect(0, 0, 400, 400);
 
     // Go through all of the particles and draw them.
