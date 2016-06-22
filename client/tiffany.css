@@ -1,0 +1,39 @@
+.jumbotron { 
+	min-height: 600px; 
+	height: 80%;
+	width:100%;
+	margin: auto;
+	
+}
+
+body {
+	height:100%;
+	width: 100%;
+}
+
+form {
+	margin-top: 40px;
+}
+
+img {
+	z-index: 200;
+	opacity: .60;
+}
+
+
+.navbar-nav {
+	float: right;
+	padding-right: 5%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -50px; /*the bottom margin is the neg. value of the footer's height*/ 
+}
+
+.footer, .push {
+		height:50px; /*push must be the same height as .footer*/ 
+
+}
